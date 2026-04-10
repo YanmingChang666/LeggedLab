@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Run URDF">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00000000 0.00000000 0.2"
+        rpy="0 0 0" />
+      <mass
+        value="8.8" />
+      <inertia
+        ixx="0.40158934"
+        ixy="0.00000000"
+        ixz="0.00000000"
+        iyy="0.38112998"
+        iyz="0.00000000"
+        izz="0.02377043" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="shoulder-pitch-r">
+    <inertial>
+      <origin
+        xyz="0.00000000 0.00000000 -0.14232213"
+        rpy="0 0 0" />
+      <mass
+        value="1.5" />
+      <inertia
+        ixx="0.01327705"
+        ixy="0.00000000"
+        ixz="0.00000000"
+        iyy="0.01326083"
+        iyz="0.00000000"
+        izz="0.00063611" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/shoulder-pitch-r.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/shoulder-pitch-r.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder-pitch-r"
+    type="revolute">
+    <origin
+      xyz="0 -0.175 0.6"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="shoulder-pitch-r" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="elbow-pitch-r">
+    <inertial>
+      <origin
+        xyz="-0.00000000 0.00000000 -0.16990976"
+        rpy="0 0 0" />
+      <mass
+        value="0.5" />
+      <inertia
+        ixx="0.00508660"
+        ixy="0"
+        ixz="0"
+        iyy="0.00509042"
+        iyz="0"
+        izz="0.00015172" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/elbow-pitch-r.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/elbow-pitch-r.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="elbow-pitch-r"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.3"
+      rpy="0 0 0" />
+    <parent
+      link="shoulder-pitch-r" />
+    <child
+      link="elbow-pitch-r" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="2.09"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="shoulder-pitch-l">
+    <inertial>
+      <origin
+        xyz="0 0 -0.14232213"
+        rpy="0 0 0" />
+      <mass
+        value="1.5" />
+      <inertia
+        ixx="0.01327705"
+        ixy="0"
+        ixz="0"
+        iyy="0.01326083"
+        iyz="0"
+        izz="0.00063611" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/shoulder-pitch-l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/shoulder-pitch-l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder-pitch-l"
+    type="revolute">
+    <origin
+      xyz="0 0.175 0.6"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="shoulder-pitch-l" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="elbow-pitch-l">
+    <inertial>
+      <origin
+        xyz="0 0 -0.16991"
+        rpy="0 0 0" />
+      <mass
+        value="0.5" />
+      <inertia
+        ixx="0.00508660"
+        ixy="0"
+        ixz="0"
+        iyy="0.00509042"
+        iyz="0"
+        izz="0.00015172" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/elbow-pitch-l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/elbow-pitch-l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="elbow-pitch-l"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.3"
+      rpy="0 0 0" />
+    <parent
+      link="shoulder-pitch-l" />
+    <child
+      link="elbow-pitch-l" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="2.09"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="waist-yaw">
+    <inertial>
+      <origin
+        xyz="0 0 -0.0242"
+        rpy="0 0 0" />
+      <mass
+        value="5" />
+      <inertia
+        ixx="0.02028552"
+        ixy="0"
+        ixz="0"
+        iyy="0.00357637"
+        iyz="0"
+        izz="0.02140315" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/waist-yaw.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/waist-yaw.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="waist-yaw"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="waist-yaw" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.047"
+      upper="1.047"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="hip-roll-r">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1" />
+      <inertia
+        ixx="0.00028196"
+        ixy="0"
+        ixz="0"
+        iyy="0.00039641"
+        iyz="0"
+        izz="0.00037372" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/hip-roll-r.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/hip-roll-r.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip-roll-r"
+    type="revolute">
+    <origin
+      xyz="0 -0.1 -0.025"
+      rpy="0 0 0" />
+    <parent
+      link="waist-yaw" />
+    <child
+      link="hip-roll-r" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="1.047"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="hip-yaw-r">
+    <inertial>
+      <origin
+        xyz="0 0 -0.044957"
+        rpy="0 0 0" />
+      <mass
+        value="1.4" />
+      <inertia
+        ixx="0.00106238"
+        ixy="0"
+        ixz="0"
+        iyy="0.00094953"
+        iyz="0"
+        izz="0.00063106" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/hip-yaw-r.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/hip-yaw-r.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip-yaw-r"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="hip-roll-r" />
+    <child
+      link="hip-yaw-r" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.047"
+      upper="1.047"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="hip-pitch-r">
+    <inertial>
+      <origin
+        xyz="0 0 -0.175"
+        rpy="0 0 0" />
+      <mass
+        value="5" />
+      <inertia
+        ixx="0.05456854"
+        ixy="0"
+        ixz="0"
+        iyy="0.05464315"
+        iyz="0"
+        izz="0.00150381" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/hip-pitch-r.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/hip-pitch-r.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip-pitch-r"
+    type="revolute">
+    <origin
+      xyz="4.4545E-05 0 -0.06"
+      rpy="0 0 0" />
+    <parent
+      link="hip-yaw-r" />
+    <child
+      link="hip-pitch-r" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="knee-pitch-r">
+    <inertial>
+      <origin
+        xyz="0 0 -0.17"
+        rpy="0 0 0" />
+      <mass
+        value="1" />
+      <inertia
+        ixx="0.01097354"
+        ixy="0"
+        ixz="0"
+        iyy="0.01095132"
+        iyz="0"
+        izz="0.00035035" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/knee-pitch-r.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/knee-pitch-r.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="knee-pitch-r"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.35"
+      rpy="0 0 0" />
+    <parent
+      link="hip-pitch-r" />
+    <child
+      link="knee-pitch-r" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-2.44"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ankle-pitch-r">
+    <inertial>
+      <origin
+        xyz="0 0 -0.042192"
+        rpy="0 0 0" />
+      <mass
+        value="0.5" />
+      <inertia
+        ixx="0.00049650"
+        ixy="0"
+        ixz="0"
+        iyy="0.00283046"
+        iyz="0"
+        izz="0.00281879" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/ankle-pitch-r.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/ankle-pitch-r.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ankle-pitch-r"
+    type="revolute">
+    <origin
+      xyz="-4.4545E-05 0 -0.34"
+      rpy="0 0 0" />
+    <parent
+      link="knee-pitch-r" />
+    <child
+      link="ankle-pitch-r" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-0.52"
+      upper="0.52"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="hip-roll-l">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1" />
+      <inertia
+        ixx="0.00028196"
+        ixy="0"
+        ixz="0"
+        iyy=" 0.00039641"
+        iyz="0"
+        izz="0.00037372" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/hip-roll-l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/hip-roll-l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip-roll-l"
+    type="revolute">
+    <origin
+      xyz="0 0.1 -0.025"
+      rpy="0 0 0" />
+    <parent
+      link="waist-yaw" />
+    <child
+      link="hip-roll-l" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="1.047"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="hip-yaw-l">
+    <inertial>
+      <origin
+        xyz="0 0 -0.044957"
+        rpy="0 0 0" />
+      <mass
+        value="1.4" />
+      <inertia
+        ixx="0.00106238"
+        ixy="0"
+        ixz="0"
+        iyy="0.00094953"
+        iyz="0"
+        izz="0.00063106" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/hip-yaw-l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/hip-yaw-l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip-yaw-l"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="hip-roll-l" />
+    <child
+      link="hip-yaw-l" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.047"
+      upper="1.047"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="hip-pitch-l">
+    <inertial>
+      <origin
+        xyz="0 0 -0.175"
+        rpy="0 0 0" />
+      <mass
+        value="5" />
+      <inertia
+        ixx="0.05456854"
+        ixy="0"
+        ixz="0"
+        iyy="0.05464315"
+        iyz="0"
+        izz="0.00150381" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/hip-pitch-l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/hip-pitch-l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip-pitch-l"
+    type="revolute">
+    <origin
+      xyz="4.4545E-05 0 -0.06"
+      rpy="0 0 0" />
+    <parent
+      link="hip-yaw-l" />
+    <child
+      link="hip-pitch-l" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="knee-pitch-l">
+    <inertial>
+      <origin
+        xyz="0 0 -0.17"
+        rpy="0 0 0" />
+      <mass
+        value="1" />
+      <inertia
+        ixx="0.01097354"
+        ixy="0"
+        ixz="0"
+        iyy="0.01095132"
+        iyz="0"
+        izz="0.00035035" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/knee-pitch-l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/knee-pitch-l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="knee-pitch-l"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.35"
+      rpy="0 0 0" />
+    <parent
+      link="hip-pitch-l" />
+    <child
+      link="knee-pitch-l" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-2.44"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ankle-pitch-l">
+    <inertial>
+      <origin
+        xyz="0 0 -0.042192"
+        rpy="0 0 0" />
+      <mass
+        value="0.5" />
+      <inertia
+        ixx="0.00049650"
+        ixy="0"
+        ixz="0"
+        iyy="0.00283046"
+        iyz="0"
+        izz="0.00281879" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/ankle-pitch-l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Run URDF/meshes/ankle-pitch-l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ankle-pitch-l"
+    type="revolute">
+    <origin
+      xyz="-4.4545E-05 0 -0.34"
+      rpy="0 0 0" />
+    <parent
+      link="knee-pitch-l" />
+    <child
+      link="ankle-pitch-l" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-0.52"
+      upper="0.52"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
